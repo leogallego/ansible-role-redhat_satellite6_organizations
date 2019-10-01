@@ -1,6 +1,8 @@
-# Role Name
+# Ansible role for Satellite 6 Organizations
 
-Ansible role for configuring everything about the Organizations in Satellite 6. Including but not neccisarly limited to:
+Ansible role for configuring everything about the Organizations in Satellite 6. 
+
+Including but not necessarily limited to:
 * Create Organization(s)
 * Upload Manfiest
 * Create Lifecycle Environment Paths
@@ -38,12 +40,12 @@ Details about the `satellite_organizations` role variable dictionary.
   host: localhost
   vars:
     satellite_api_basion: localhost
-    satellite_username: ansible-tower
-    satellite_password: NAPSR0cks!
-    satellite_url: https://satellite.rhc-lab.iad.redhat.com
+    satellite_username: satuser
+    satellite_password: s4tpassword
+    satellite_url: https://satellite.example.com
     satellite_organizations:
-    - name: IanTest
-      manifest: files/manifest_IAN_TEST_20180708T164433Z.zip
+    - name: Example
+      manifest: files/manifest.zip
       lifecycle_environment_paths:
       - environments:
         - dev
